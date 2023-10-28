@@ -1,0 +1,20 @@
+class Solution{
+public:	
+
+   int sPalindrome( string s, int start, int end){
+       // basee caes
+       if(start >= end)
+       return 1;
+       
+       if(s[start] != s[end])
+       return 0;
+       
+       return sPalindrome(s,start+1, end-1);
+   }
+	
+	int isPalindrome(string S)
+	{
+	  int n = S.size() - 1;
+	  return sPalindrome(S, 0, n);
+	}
+};
